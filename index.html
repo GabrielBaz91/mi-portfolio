@@ -1,22 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="main.js"></script>
-    <title>Document</title>
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .proyecto {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+    </style>
 </head>
-
 <body>
-    <h1>Lista de tareas a realizar antes de fin de año</h1>
-    <h2>tembien aca se modificaron cosas</h2>
-    <form id="todo-form">
-        <input type="text" id="todo-input" placeholder="Agregar tarea...">
-        <button type="submit">Agregar</button>
-    </form>
-
-    <ul id="todo-list"></ul>
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="inicio">
+        <h1>¡Hola, soy [Tu Nombre]!</h1>
+        <p>Desarrollador Java | Spring Boot | MySQL</p>
+    </section>
+    
+    <section id="proyectos">
+        <h2>Proyectos Destacados</h2>
+        <div class="proyecto">
+            <h3>Sistema de Inventario</h3>
+            <p>Aplicación en JavaFX con MySQL para gestionar productos en una tienda.</p>
+            <a href="#">Ver en GitHub</a>
+        </div>
+        <div class="proyecto">
+            <h3>Gestión de Usuarios</h3>
+            <p>Sistema en Spring Boot con autenticación y base de datos.</p>
+            <a href="#">Ver en GitHub</a>
+        </div>
+    </section>
+    
+    <section id="sobre-mi">
+        <h2>Sobre Mí</h2>
+        <p>Soy un apasionado de la programación con experiencia en Java y Spring Boot. Busco mi primera oportunidad en IT.</p>
+    </section>
+    
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Email: tuemail@example.com</p>
+        <p>GitHub: <a href="#">github.com/tuusuario</a></p>
+        <p>LinkedIn: <a href="#">linkedin.com/in/tuusuario</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Tu Nombre</p>
+    </footer>
 </body>
+</html>
