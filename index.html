@@ -3,20 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Css/style.css" />
+    <script src="js/main.js" defer></script>
     <title>Mi Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header>
-      <h1>Bienvenido a mi Portfolio</h1>
-    </header>
-    <main>
-      <!-- Aquí van tus proyectos -->
-    </main>
+  <body class="Dark">
+    <header class="header">
+      <div class="switches">
+        <div id="toggleTheme" class="toggle-theme">
+          <img id="toggleIcon" src="Images/icons/moon.svg" alt="icon-theme" class="toggle-theme_icon" />
+          <p id="toggleText" class="toggle-theme_text">Dark mode</p>
+        </div>
+        <div id ="toggleColors" class="colors">
+        
+           <div data-color ="hsl(214, 84%, 56%)" class="colors__item colors__item--blue"></div>
+            
+
+           <div data-color="hsl(170, 47%, 49%)"  class="colors__item colors__item--green"></div>
+          
+          
+           <div data-color="hsl(283, 83%, 47%)"  class="colors__item colors__item--purple"></div>
+          
+          
+           <div data-color="hsl(19, 100%, 61%"  class="colors__item colors__item--orange"></div>
+        </div>
+    </div>
+</header>
+<head>
+ 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+</head>
+
+<main class="main">
+  <section class="colum column--left">
+    <!--card--profile-->
+    <article class="card card--profile">
+      <div class="card__image-container">
+        <img src="Images/SPACE  ESPACIO.jpg" alt="profile" class="card__image" />
+      </div>
+      <div class="cards__header">
+        <h2 class="card__title">Baz Gabriel Adrian</h2>
+        <p class="card__subtitle">Programador Junior | Java, Spring Boot, MySQL</p>
+      </div>
+      <div class="card__body">
+        <div class="card__link">
+          <a href="mailto:gabrielbaz91@gmail.com">
+            <i class="fas fa-envelope"></i> gabrielbaz91@gmail.com
+          </a>
+        </div>
+        <div class="card__link">
+          <a href="tel:+541166197662">
+            <i class="fas fa-phone"></i> +54 11 6619 7662
+          </a>
+        </div>
+        <div class="card__link">
+          <a href="https://wa.me/541166197662" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+        <p class="card__txt">
+          Profesional en transición con experiencia en administración y atención al cliente, y formación en desarrollo de software (Java, Spring Boot, JavaFX).
+          Comprometido con el aprendizaje continuo, busco aplicar mis habilidades técnicas y organizacionales para contribuir en proyectos dinámicos y roles que combinen desarrollo y gestión.
+        </p>
+      </div>
+    </article>
+  </section>
+</main>
+    
     <footer>
-      <p> 2025 Gabriel Baz</p>
     </footer>
-    <script src="main.js"></script>git add .
-    git commit -m "Reestructurando el proyecto: creando archivos HTML, CSS y JS separados"
   </body>
 </html>

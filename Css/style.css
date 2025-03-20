@@ -1,0 +1,172 @@
+:root {
+  --primary-color: hsl(214, 84%, 56%);
+  --text-color: hsl(0, 0%, 31%);
+  --bg-color: hsl(0, 0%, 90%);
+  --bg-card-color: hsl(0, 0%, 93%);
+  --transition: color 0.1s, background-color 0.2s ease-in-out;
+  --border-radius: 0.4em;
+}
+
+* {
+  box-sizing: border-box;
+
+}
+a{
+  color: var(--primary-color);
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+ 
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--transition);
+  font-family:sans-serif;
+}
+
+body.Dark {
+  --text-color: hsl(0, 44%, 90%);
+  --bg-color: hsla(0, 0%, 14%, 0.952);
+  --bg-card-color: hsl(0, 0%, 19%);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  padding: 0 1.5em;
+  background-color: var(--bg-card-color);
+  transition: var(--transition);
+}
+
+.switches {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.toggle-theme_icon {
+  margin-right: 0.5em;
+  width: 20px;
+}
+
+.toggle-theme_text {
+  font-size: 0.8rem;
+}
+
+.colors{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20px;
+  width: 100px;
+
+}
+
+.colors__item{
+width: 20px;
+height: 20px;
+border: 1px , solid var(--text-color); 
+cursor: pointer;
+background-color: var(--primary-color);
+
+}
+
+.colors__item--blue{
+ --primary-color: hsl(214, 84%, 56%);
+}
+.colors__item--green{
+  --primary-color: hsl(170, 47%, 49%);
+ }
+ .colors__item--orange{
+  --primary-color: hsl(19, 100%, 61%);
+ }
+ .colors__item--purple{
+  --primary-color: hsl(283, 83%, 47%);
+ }
+
+ .switches {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos entre los extremos */
+  width: 100%; /* Asegura que .switches ocupe todo el ancho del header */
+}
+
+.title {
+text-align: center ;
+color: var(--primary-color);
+transition: var(--transition);
+
+}
+.main {
+  display:grid ;
+  padding: 2em;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    grid-template-columns: min-content  1fr;
+  }
+  
+}
+
+.card {
+  padding: 1em;
+  background-color: var(--bg-card-color);
+  border-radius: var(--border-radius);
+}
+
+.card__image-container {
+  min-width: 320px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.card__header {
+  padding: 1em;
+}
+
+.card__title {
+  margin: 0;
+  margin-top: 5px; /* Espacio entre la imagen y el título */
+  font-size: 1.2rem;
+}
+
+.card__subtitle { /* Corregí el error de nombre */
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.card__link {
+   margin-top: 0.75em; /* Reduce el espacio entre los enlaces */
+  display: block; /* Para que cada enlace ocupe su propia línea */
+}
+
+.card__link a {
+  text-decoration: none; /* Quitar subrayado */
+  color: var(--primary-color); /* Color del texto */
+  font-size: 1rem; /* Ajustar el tamaño del texto si es necesario */
+  display: inline-flex;
+  align-items: center; /* Centrar el icono y el texto */
+}
+
+.card__link a:hover {
+  color:var(--primary-color); /* Cambiar color al pasar el cursor (puedes personalizarlo) */
+}
+
+.card__link i {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+  font-size: 1.2rem; /* Ajustar el tamaño de los iconos */
+}
