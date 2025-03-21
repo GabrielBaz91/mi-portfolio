@@ -15,6 +15,7 @@
 a{
   color: var(--primary-color);
   text-decoration: none;
+
 }
 img {
   max-width: 100%;
@@ -159,7 +160,7 @@ transition: var(--transition);
 .card__title {
   margin: 0;
   margin-top: 5px; /* Espacio entre la imagen y el título */
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 1em;
 }
 
@@ -181,14 +182,12 @@ transition: var(--transition);
   align-items: center; /* Centrar el icono y el texto */
 }
 
-.card__link a:hover {
-  color:var(--primary-color); /* Cambiar color al pasar el cursor (puedes personalizarlo) */
-}
 
 .card__link i {
   margin-right: 8px; /* Espacio entre el icono y el texto */
   font-size: 1.2rem; /* Ajustar el tamaño de los iconos */
 }
+
 
 .skills{
 
@@ -246,7 +245,7 @@ overflow: hidden;
   background-color: var(--primary-color);
   transition: var(--transition); 
   left: -175px;
-   animation: skills-bar-fill 2s ease-in-out forwards;
+  animation: skills-bar-fill 2s ease-in-out forwards;
 }
 
 .skills__bar--10::after {
@@ -333,3 +332,69 @@ overflow: hidden;
     height: auto;
     margin: 0 auto;
   }
+
+/* Estilos para las tarjetas de proyectos */
+.card__project {
+  grid-column: span 3;
+}
+
+.card__project-content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 720px) {
+  .card__project-content {
+    flex-direction: row;
+    gap: 1.5em;
+  }
+  
+  .card__image-container {
+    flex: 0 0 40%;
+  }
+  
+  .card__project-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.project {
+  margin-bottom: 1em;
+}
+
+.project__tag {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 0.8rem;
+}
+
+.buttons {
+  margin-top: auto;
+  display: flex;
+  gap: 1em;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: var(--border-radius);
+  text-align: center;
+  cursor: pointer;
+}
+
+.button__primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.button__ghost {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
